@@ -1,0 +1,65 @@
+@use "../Variables.scss";
+
+.Informations {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+
+  &-section {
+    border-radius: 15px;
+    z-index: 10000;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+  }
+
+  &-title {
+    font-size: 0.7em;
+    color: Variables.$font-medium-grey;
+    margin: 0.8em;
+    text-transform: uppercase;
+  }
+
+  &-data {
+    color: Variables.$font-dark-grey;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+  }
+}
+
+@media (min-width: 992px) {
+  .Informations {
+    &-section {
+      width: 70vw;
+      display: flex;
+      padding: 1.5em 2em;
+      justify-content: space-between;
+
+      &-desktop {
+        text-align: left;
+        width: 24%;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-right: 1px solid lightgray;
+        }
+      }
+    }
+
+    &-title {
+      margin-left: 0;
+      padding-left: 0.5em;
+    }
+
+    &-data {
+      margin-left: 0;
+      padding-left: 0.2em;
+    }
+  }
+}
